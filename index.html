@@ -20,17 +20,9 @@
 
     <h4 id="result"></h4>
 
-    Formula:
-    <ul>
-      <li>
-        Rotating inside:
-        <code>((360 - (Tile Angle)) / 360) * 2 * (Line BPM)</code>
-      </li>
-      <li>
-        Rotating outside:
-        <code>((Tile Angle) / 360) * 2 * (Line BPM)</code>
-      </li>
-    </ul>
+    Formula: <code>((Tile Angle) / 360) * 2 * (Line BPM)</code>
+
+    <br /><br />
 
     <a href="https://github.com/despenser08/ADOFAI-GetCircleBPM">GitHub</a>
 
@@ -45,10 +37,7 @@
 
         if (!linebpm || !angle) return false;
 
-        var res =
-          angle > 180
-            ? (angle / 360) * 2 * linebpm
-            : ((360 - angle) / 360) * 2 * linebpm;
+        var res = (angle / 360) * 2 * linebpm;
 
         document.getElementById("result").innerHTML = "Circle BPM: " + res;
       }
